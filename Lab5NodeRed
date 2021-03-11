@@ -1,0 +1,235 @@
+[
+    {
+        "id": "f903b72f.841d78",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b504a066.8abde",
+        "type": "inject",
+        "z": "f903b72f.841d78",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 240,
+        "wires": [
+            [
+                "9727c635.5d24a8",
+                "9bfb5479.d31248",
+                "c2f2bc29.7c788",
+                "a18a5b2a.faf3c8"
+            ]
+        ]
+    },
+    {
+        "id": "9727c635.5d24a8",
+        "type": "file in",
+        "z": "f903b72f.841d78",
+        "name": "",
+        "filename": "/tmp/PDL.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 310,
+        "y": 200,
+        "wires": [
+            [
+                "877d7c6b.9175a"
+            ]
+        ]
+    },
+    {
+        "id": "9bfb5479.d31248",
+        "type": "file in",
+        "z": "f903b72f.841d78",
+        "name": "",
+        "filename": "/tmp/PDR.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 320,
+        "y": 280,
+        "wires": [
+            [
+                "a64c44fa.7c2858"
+            ]
+        ]
+    },
+    {
+        "id": "c2f2bc29.7c788",
+        "type": "file in",
+        "z": "f903b72f.841d78",
+        "name": "",
+        "filename": "/tmp/XDOT.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 320,
+        "y": 360,
+        "wires": [
+            [
+                "a35303df.0f936"
+            ]
+        ]
+    },
+    {
+        "id": "a18a5b2a.faf3c8",
+        "type": "file in",
+        "z": "f903b72f.841d78",
+        "name": "",
+        "filename": "/tmp/THETADOT.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 320,
+        "y": 440,
+        "wires": [
+            [
+                "21e8876c.749d08"
+            ]
+        ]
+    },
+    {
+        "id": "877d7c6b.9175a",
+        "type": "ui_gauge",
+        "z": "f903b72f.841d78",
+        "name": "",
+        "group": "c106629f.7c90a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "PDL",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 630,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a64c44fa.7c2858",
+        "type": "ui_gauge",
+        "z": "f903b72f.841d78",
+        "name": "",
+        "group": "c106629f.7c90a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "PDR",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 630,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a35303df.0f936",
+        "type": "ui_gauge",
+        "z": "f903b72f.841d78",
+        "name": "",
+        "group": "c106629f.7c90a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "XDOT",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-1",
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 640,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "21e8876c.749d08",
+        "type": "ui_gauge",
+        "z": "f903b72f.841d78",
+        "name": "",
+        "group": "c106629f.7c90a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "THETADOT",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-1",
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 680,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "c106629f.7c90a",
+        "type": "ui_group",
+        "name": "LAB5",
+        "tab": "75e674fe.586c2c",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "75e674fe.586c2c",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
